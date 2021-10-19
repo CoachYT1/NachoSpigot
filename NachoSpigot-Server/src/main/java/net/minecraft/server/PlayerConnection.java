@@ -888,7 +888,7 @@ public class PlayerConnection implements PacketListenerPlayIn, IUpdatePlayerList
 
                 // SportPaper end
             } else{
-                if(MinecraftServer.currentTick - lastDropTick > 1) this.player.playerInteractManager.useItem(this.player, this.player.world, itemstack);
+                if(MinecraftServer.currentTick - lastDropTick > 1 && Nacho.get().getConfig().fixEatWhileRunning) this.player.playerInteractManager.useItem(this.player, this.player.world, itemstack);
             }
             // Spigot end
 
